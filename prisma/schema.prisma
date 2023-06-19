@@ -1,0 +1,73 @@
+generator client {
+  provider = "prisma-client-js"
+}
+
+datasource db {
+  provider = "postgresql"
+  url      = env("DATABASE_URL")
+}
+
+model users {
+  id       String @id @default(cuid())
+  name     String
+  username String @unique
+  email    String @unique
+  password String
+
+  sessions session[]
+  apikeys  apikey[]
+
+  createdAt DateTime @default(now())
+  updatedAt DateTime @updatedAt
+
+  @@index([username, email])
+}
+
+model session {
+  id        String  @id @default(cuid())
+  valid     Boolean @default(true)
+  userAgent String  @map("user_agent")
+  ip        String
+
+  userId String
+  user   users  @relation(fields: [userId], references: [id], onDelete: Cascade)
+
+  createdAt DateTime @default(now())
+  updatedAt DateTime @updatedAt
+
+  @@index([userId, ip])
+}
+
+model apikey {
+  id      String  @id @default(cuid())
+  enabled Boolean @default(true)
+  key     String  @unique
+
+  userId      String
+  user        users        @relation(fields: [userId], references: [id], onDelete: Cascade)
+  apiRequests apiRequest[]
+
+  createdAt DateTime @default(now())
+  updatedAt DateTime @updatedAt
+
+  @@index([userId])
+  @@map("api_keys")
+}
+
+model apiRequest {
+  id        String   @id @default(cuid())
+  timestamp DateTime @default(now())
+  ip        String
+  userAgent String   @map("user_agent")
+  method    String
+  path      String
+  status    Int
+  duration  Int
+
+  apikeyUsed String @map("apikey_used")
+  apikeyId   String
+  apikey     apikey @relation(fields: [apikeyId], references: [id], onDelete: Cascade)
+
+  @@index([apikeyId, timestamp, ip])
+  @@map("api_requests")
+}
