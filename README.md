@@ -1,23 +1,23 @@
-# Phonetisme API
+# Sentrimetric API
 
-Phonetisme is an Express API that allows users to generate an API key and perform string analysis operations. It provides functionality to check the similarity between two strings, analyze the sentiment of a sentence, and determine if two words have the same phonetic sound.
+Sentrimetric is an Express API that allows users to generate an API key and perform string analysis operations. It provides functionality to check the similarity between two strings, analyze the sentiment of a sentence, and determine if two words have the same phonetic sound.
 
 ## About the API
 
-The Phonetisme API allows users to generate an API key, which they can use to perform string analysis operations such as checking the similarity between two strings, analyzing the sentiment of a sentence, and determining if two words have the same phonetic sound.
+The Sentrimetric API allows users to generate an API key, which they can use to perform string analysis operations such as checking the similarity between two strings, analyzing the sentiment of a sentence, and determining if two words have the same phonetic sound.
 
 The API follows RESTful principles and uses JSON for request and response payloads. Authentication is required for certain endpoints using an API key.
 
 ## Installation
 
-To install and run the Phonetisme API, follow these steps:
+To install and run the Sentrimetric API, follow these steps:
 
 1. Clone the repository: `git clone <repository-url>`
 2. Install dependencies: `pnpm install`
 
 ### Set Up Database
 
-The Phonetisme API requires a PostgreSQL database. You can use Docker to run a PostgreSQL container:
+The Sentrimetric API requires a PostgreSQL database. You can use Docker to run a PostgreSQL container:
 
 1. Install Docker: [Docker Installation Guide](https://docs.docker.com/get-docker/).
 2. Run the PostgreSQL container:
@@ -28,7 +28,7 @@ docker run --name postgres-container -e POSTGRES_PASSWORD=<password> -p 5432:543
 
 ### Set Up Redis
 
-The Phonetisme API uses Redis for rate limiting. You can also use Docker to run a Redis container:
+The Sentrimetric API uses Redis for rate limiting. You can also use Docker to run a Redis container:
 
 1. Install Docker: [Docker Installation Guide](https://docs.docker.com/get-docker/).
 2. Run the Redis container:
@@ -91,7 +91,7 @@ One notable addition to the project is the `zenv` function, which is used to ver
 
 ## Usage
 
-To run the Phonetisme API, you can use the following npm scripts:
+To run the Sentrimetric API, you can use the following npm scripts:
 
 - **Development Mode**
 
@@ -205,7 +205,7 @@ Please note that certain endpoints require authentication using an API key. Ensu
 
 ## Contributing
 
-Contributions are welcome! Here are the steps to contribute to the Phonetisme API project:
+Contributions are welcome! Here are the steps to contribute to the Sentrimetric API project:
 
 1. Fork the repository.
 2. Create a new branch for your feature or bug fix: `git checkout -b feature/your-feature-name` or `git checkout -b bugfix/your-bug-fix-name`.

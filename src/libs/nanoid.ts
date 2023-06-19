@@ -1,8 +1,8 @@
-import { customAlphabet } from "nanoid";
+import * as nanoid from "nanoid";
 
 const charset = `0123456789ABCDEFGHIJKLMNOPQRSTUVWXYZ_abcdefghijklmnopqrstuvwxyz-`;
 
-export function nanoid() {
-  const nanoid = customAlphabet(charset, 32);
-  return nanoid();
+export function generateId() {
+  const id = nanoid.customAlphabet(charset, 32);
+  return id();
 }

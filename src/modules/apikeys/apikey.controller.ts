@@ -6,7 +6,7 @@ import {
   storeApiKey,
 } from "./apikey.service";
 
-import { nanoid } from "../../libs/nanoid";
+import { generateId } from "../../libs/nanoid";
 import { payload } from "../../middlewares/check-user";
 import logger from "../../libs/logger";
 
@@ -41,7 +41,7 @@ export async function generateApiKeyHandler(req: Request, res: Response) {
       return res.status(409).send("API key already exists for this user.");
     }
     // Step 3: Generate a API Key
-    const newkey = nanoid();
+    const newkey = generateId();
     // Step 4: Insert API Key in database
     const apiKey = await storeApiKey(payload.uid, newkey);
 

@@ -8,7 +8,7 @@ import servicesRouter from "./modules/services/services.router";
 
 export default function router(app: Express) {
   app.get("/", (req: Request, res: Response) => {
-    return res.send("phonetisme api v1 🚀🚀");
+    return res.send("sentrimetric api v1 🚀🚀");
   });
 
   app.get("/health", (req: Request, res: Response) => {
