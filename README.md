@@ -89,6 +89,10 @@ One notable addition to the project is the `zenv` function, which is used to ver
 - [tsx](https://www.npmjs.com/package/tsx): TypeScript transpiler.
 - [typescript](https://www.npmjs.com/package/typescript): JavaScript superset that provides static typing.
 
+## Package Installer
+
+- [pnpm](https://www.npmjs.com/package/pnpm): Fast, disk space efficient package manager.
+
 ## Usage
 
 To run the Sentrimetric API, you can use the following npm scripts:
@@ -97,27 +101,27 @@ To run the Sentrimetric API, you can use the following npm scripts:
 
   - Run the API server in development mode with automatic restart on file changes:
     ```
-    npm run dev
+    pnpm dev
     ```
 
 - **Production Mode**
 
   - Build the TypeScript code and start the API server in production mode:
     ```
-    npm run prod
+    pnpm prod
     ```
 
 - **Synchronize Database**
 
   - Push database changes and generate Prisma client:
     ```
-    npm run sync:db
+    pnpm sync:db
     ```
 
 - **Build**
   - Build the TypeScript code to the `dist` directory:
     ```
-    npm run build
+    pnpm  build
     ```
 
 Make sure to set up your environment variables and configure the Prisma database connection before running the API. Refer to the "Installation" section for more details.
