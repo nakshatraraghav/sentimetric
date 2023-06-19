@@ -1,0 +1,314 @@
+{
+    "client": "Thunder Client",
+    "collectionName": "sentimetric",
+    "dateExported": "2023-06-19T14:19:10.480Z",
+    "version": "1.1",
+    "folders": [
+        {
+            "_id": "3bd5c592-91c1-4c96-98ae-10120c443cbe",
+            "name": "users",
+            "containerId": "",
+            "created": "2023-06-18T06:41:36.104Z",
+            "sortNum": 10000
+        },
+        {
+            "_id": "72179d69-02b3-47a1-b16d-3271d3049ae2",
+            "name": "sessions",
+            "containerId": "",
+            "created": "2023-06-18T06:41:36.108Z",
+            "sortNum": 20000
+        },
+        {
+            "_id": "028a4d8d-3cd4-4d5f-af14-e23a96e0fff4",
+            "name": "api-keys",
+            "containerId": "",
+            "created": "2023-06-18T12:13:05.516Z",
+            "sortNum": 40000
+        },
+        {
+            "_id": "f4d237ca-670c-403a-815e-23fe12a9f526",
+            "name": "services",
+            "containerId": "",
+            "created": "2023-06-18T15:08:20.723Z",
+            "sortNum": 50000
+        },
+        {
+            "_id": "d0412737-b161-4a89-a51f-a4b611e4a96a",
+            "name": "api-requests",
+            "containerId": "",
+            "created": "2023-06-19T05:19:51.307Z",
+            "sortNum": 60000
+        }
+    ],
+    "requests": [
+        {
+            "_id": "9f718915-5c2c-4adc-99d1-c39a7a9d34c2",
+            "colId": "7afb908b-b576-416c-80b0-f35c0011c466",
+            "containerId": "",
+            "name": "healthcheck",
+            "url": "localhost:1337/health",
+            "method": "GET",
+            "sortNum": 10000,
+            "created": "2023-06-18T06:41:36.107Z",
+            "modified": "2023-06-18T12:10:40.816Z",
+            "headers": [],
+            "params": [],
+            "tests": []
+        },
+        {
+            "_id": "1da92480-1e03-4357-abd5-b194485b2956",
+            "colId": "7afb908b-b576-416c-80b0-f35c0011c466",
+            "containerId": "3bd5c592-91c1-4c96-98ae-10120c443cbe",
+            "name": "create user",
+            "url": "localhost:1337/api/users/",
+            "method": "POST",
+            "sortNum": 20000,
+            "created": "2023-06-18T06:41:36.108Z",
+            "modified": "2023-06-19T12:35:24.571Z",
+            "headers": [],
+            "params": [],
+            "body": {
+                "type": "json",
+                "raw": "{\n  \"name\": \"nakshatra raghav\",\n  \"username\": \"combatrickshaw\",\n  \"email\": \"nakshatra.raghav@gmail.com\",\n  \"password\": \"hellohiasd\"\n}",
+                "form": []
+            },
+            "tests": []
+        },
+        {
+            "_id": "c654fff0-f1d7-4067-ac9f-6bd4b6e5db3b",
+            "colId": "7afb908b-b576-416c-80b0-f35c0011c466",
+            "containerId": "72179d69-02b3-47a1-b16d-3271d3049ae2",
+            "name": "login",
+            "url": "localhost:1337/api/sessions",
+            "method": "POST",
+            "sortNum": 30000,
+            "created": "2023-06-18T06:41:36.110Z",
+            "modified": "2023-06-19T12:35:38.848Z",
+            "headers": [],
+            "params": [],
+            "body": {
+                "type": "json",
+                "raw": "{\n  \"name\": \"nakshatra raghav\",\n  \"username\": \"combatrickshaw\",\n  \"email\": \"nakshatra.raghav@gmail.com\",\n  \"password\": \"hellohiasd\"\n}",
+                "form": []
+            },
+            "tests": []
+        },
+        {
+            "_id": "0bf9678d-74b0-4ab4-a31d-f148d9219134",
+            "colId": "7afb908b-b576-416c-80b0-f35c0011c466",
+            "containerId": "72179d69-02b3-47a1-b16d-3271d3049ae2",
+            "name": "current session",
+            "url": "localhost:1337/api/sessions",
+            "method": "GET",
+            "sortNum": 40000,
+            "created": "2023-06-18T06:41:36.111Z",
+            "modified": "2023-06-18T10:54:20.522Z",
+            "headers": [],
+            "params": [],
+            "tests": []
+        },
+        {
+            "_id": "ce6d79b5-7c52-4fbb-b44f-b30ff3cfa122",
+            "colId": "7afb908b-b576-416c-80b0-f35c0011c466",
+            "containerId": "72179d69-02b3-47a1-b16d-3271d3049ae2",
+            "name": "logout",
+            "url": "localhost:1337/api/sessions/",
+            "method": "DELETE",
+            "sortNum": 50000,
+            "created": "2023-06-18T06:41:36.112Z",
+            "modified": "2023-06-18T10:57:37.355Z",
+            "headers": [],
+            "params": [],
+            "tests": []
+        },
+        {
+            "_id": "aa5fcc81-0629-45b1-8d8d-013df884b501",
+            "colId": "7afb908b-b576-416c-80b0-f35c0011c466",
+            "containerId": "72179d69-02b3-47a1-b16d-3271d3049ae2",
+            "name": "logout from all devices",
+            "url": "localhost:1337/api/sessions/all",
+            "method": "DELETE",
+            "sortNum": 60000,
+            "created": "2023-06-18T06:41:36.113Z",
+            "modified": "2023-06-18T10:57:52.908Z",
+            "headers": [],
+            "params": [],
+            "tests": []
+        },
+        {
+            "_id": "9d7627f7-a030-4bc7-9669-cfa38baa7ec4",
+            "colId": "7afb908b-b576-416c-80b0-f35c0011c466",
+            "containerId": "3bd5c592-91c1-4c96-98ae-10120c443cbe",
+            "name": "delete user",
+            "url": "localhost:1337/api/users/",
+            "method": "DELETE",
+            "sortNum": 70000,
+            "created": "2023-06-18T06:41:36.114Z",
+            "modified": "2023-06-18T09:36:34.816Z",
+            "headers": [],
+            "params": [],
+            "tests": []
+        },
+        {
+            "_id": "97e3f1ae-e85c-4a50-b1db-28caa19c1b47",
+            "colId": "7afb908b-b576-416c-80b0-f35c0011c466",
+            "containerId": "72179d69-02b3-47a1-b16d-3271d3049ae2",
+            "name": "all active sessions",
+            "url": "localhost:1337/api/sessions/all",
+            "method": "GET",
+            "sortNum": 130000,
+            "created": "2023-06-18T10:54:59.533Z",
+            "modified": "2023-06-18T10:55:07.018Z",
+            "headers": [],
+            "params": [],
+            "tests": []
+        },
+        {
+            "_id": "3f7da418-f436-4806-8648-56e6f3f3182f",
+            "colId": "7afb908b-b576-416c-80b0-f35c0011c466",
+            "containerId": "",
+            "name": "api version",
+            "url": "localhost:1337/",
+            "method": "GET",
+            "sortNum": 140000,
+            "created": "2023-06-18T12:11:05.459Z",
+            "modified": "2023-06-18T12:11:10.289Z",
+            "headers": [],
+            "params": [],
+            "tests": []
+        },
+        {
+            "_id": "82a095fe-afca-4b90-bfe5-5fa047430f5f",
+            "colId": "7afb908b-b576-416c-80b0-f35c0011c466",
+            "containerId": "028a4d8d-3cd4-4d5f-af14-e23a96e0fff4",
+            "name": "generate",
+            "url": "localhost:1337/api/apikeys/",
+            "method": "POST",
+            "sortNum": 150000,
+            "created": "2023-06-18T12:13:11.029Z",
+            "modified": "2023-06-18T12:13:47.733Z",
+            "headers": [],
+            "params": [],
+            "tests": []
+        },
+        {
+            "_id": "39791e1d-4941-465a-af50-980d31d783d8",
+            "colId": "7afb908b-b576-416c-80b0-f35c0011c466",
+            "containerId": "028a4d8d-3cd4-4d5f-af14-e23a96e0fff4",
+            "name": "revoke",
+            "url": "localhost:1337/api/apikeys/",
+            "method": "DELETE",
+            "sortNum": 160000,
+            "created": "2023-06-18T12:43:14.683Z",
+            "modified": "2023-06-19T06:51:32.147Z",
+            "headers": [
+                {
+                    "name": "x-api-key",
+                    "value": "om4bDF87FuvYdMQRLGhj1gIDsVKGELhq"
+                }
+            ],
+            "params": [],
+            "tests": []
+        },
+        {
+            "_id": "75a7fba2-0713-4893-8786-b3b13004420a",
+            "colId": "7afb908b-b576-416c-80b0-f35c0011c466",
+            "containerId": "028a4d8d-3cd4-4d5f-af14-e23a96e0fff4",
+            "name": "get active api key",
+            "url": "localhost:1337/api/apikeys/",
+            "method": "GET",
+            "sortNum": 170000,
+            "created": "2023-06-18T12:58:52.691Z",
+            "modified": "2023-06-18T12:58:58.994Z",
+            "headers": [],
+            "params": [],
+            "tests": []
+        },
+        {
+            "_id": "69447f44-57bb-4e0e-a5d0-91fb876141e8",
+            "colId": "7afb908b-b576-416c-80b0-f35c0011c466",
+            "containerId": "f4d237ca-670c-403a-815e-23fe12a9f526",
+            "name": "text similarity",
+            "url": "localhost:1337/api/services/similarity",
+            "method": "POST",
+            "sortNum": 180000,
+            "created": "2023-06-18T15:08:27.126Z",
+            "modified": "2023-06-19T12:37:55.339Z",
+            "headers": [
+                {
+                    "name": "x-api-key",
+                    "value": "7jdZ4OydV4Ksb1Lq0C0EbKEEdyTUpET7"
+                }
+            ],
+            "params": [],
+            "body": {
+                "type": "json",
+                "raw": "{\n  \"text1\": \"What has happened to my delivery\",\n  \"text2\": \"What is wrong with my shipping\"\n}",
+                "form": []
+            },
+            "tests": []
+        },
+        {
+            "_id": "f4ae9572-fbbc-4c97-bb84-fb7130092fc7",
+            "colId": "7afb908b-b576-416c-80b0-f35c0011c466",
+            "containerId": "f4d237ca-670c-403a-815e-23fe12a9f526",
+            "name": "text sentiment",
+            "url": "localhost:1337/api/services/sentiment",
+            "method": "POST",
+            "sortNum": 190000,
+            "created": "2023-06-19T05:01:13.200Z",
+            "modified": "2023-06-19T12:38:06.645Z",
+            "headers": [
+                {
+                    "name": "x-api-key",
+                    "value": "7jdZ4OydV4Ksb1Lq0C0EbKEEdyTUpET7"
+                }
+            ],
+            "params": [],
+            "body": {
+                "type": "json",
+                "raw": "{\n  \"text\": \"i like apples\"\n}",
+                "form": []
+            },
+            "tests": []
+        },
+        {
+            "_id": "0d0cd03a-08ff-4005-ba08-ba48d452bad8",
+            "colId": "7afb908b-b576-416c-80b0-f35c0011c466",
+            "containerId": "d0412737-b161-4a89-a51f-a4b611e4a96a",
+            "name": "get all requests made",
+            "url": "localhost:1337/api/requests",
+            "method": "GET",
+            "sortNum": 220000,
+            "created": "2023-06-19T05:19:58.276Z",
+            "modified": "2023-06-19T05:20:23.837Z",
+            "headers": [],
+            "params": [],
+            "tests": []
+        },
+        {
+            "_id": "ac332c72-db3a-48de-ae64-adcacfce036e",
+            "colId": "7afb908b-b576-416c-80b0-f35c0011c466",
+            "containerId": "f4d237ca-670c-403a-815e-23fe12a9f526",
+            "name": "phonetic matching",
+            "url": "localhost:1337/api/services/phonetics",
+            "method": "POST",
+            "sortNum": 230000,
+            "created": "2023-06-19T05:43:41.539Z",
+            "modified": "2023-06-19T12:38:24.986Z",
+            "headers": [
+                {
+                    "name": "x-api-key",
+                    "value": "7jdZ4OydV4Ksb1Lq0C0EbKEEdyTUpET7"
+                }
+            ],
+            "params": [],
+            "body": {
+                "type": "json",
+                "raw": "{\n  \"worda\": \"phonetics\",\n  \"wordb\": \"bruih\"\n}",
+                "form": []
+            },
+            "tests": []
+        }
+    ]
+}
