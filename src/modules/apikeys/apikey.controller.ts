@@ -13,7 +13,6 @@ import logger from "../../libs/logger";
 export async function getActiveApiKeyHandler(req: Request, res: Response) {
   try {
     const payload = res.locals.user as payload;
-    console.log(payload);
     const apikey = await findValidApiKey(payload.uid);
 
     logger.info(apikey);
