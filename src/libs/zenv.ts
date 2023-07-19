@@ -3,11 +3,12 @@ import logger from "./logger";
 
 const schema = z.object({
   DATABASE_URL: z.string().url(),
+  REDIS_URL: z.string().url(),
+  REDIS_TOKEN: z.string(),
   PORT: z.string(),
   PRIVATE_KEY: z.string(),
   ACCESS_TOKEN_TTL: z.string(),
   REFRESH_TOKEN_TTL: z.string(),
-  OPENAI_API_KEY: z.string(),
 });
 
 function zenv() {
