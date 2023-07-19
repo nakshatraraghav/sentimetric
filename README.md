@@ -63,6 +63,11 @@ Make sure to adjust the PostgreSQL and PORT details in the `.env` file if you ar
 
 One notable addition to the project is the `zenv` function, which is used to verify and parse the schema file using Zod. This function ensures that the environment variables are properly defined and validated based on the specified schema.
 
+## Deployment
+
+Deployed on render.com
+[deployment-link](https://sentimetric.onrender.com/)
+
 ## Dependencies
 
 - [@prisma/client](https://www.npmjs.com/package/@prisma/client): Prisma client for working with databases.
