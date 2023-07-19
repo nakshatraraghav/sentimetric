@@ -1,17 +1,22 @@
-import redis from "ioredis";
+import { Redis } from "@upstash/redis";
 import logger from "../libs/logger";
+import env from "../libs/zenv";
 
-const kv = redis.createClient();
+function connect() {
+  try {
+    const kv = new Redis({
+      url: env.REDIS_URL,
+      token: env.REDIS_TOKEN,
+    });
 
-export function connectkv() {
-  kv.on("connect", () => {
-    logger.info("server connected to redis ");
-  });
-
-  kv.on("error", (error) => {
-    logger.error("server could not connect to redis");
+    logger.info("server connected to redis");
+    return kv;
+  } catch (error) {
+    logger.error("server failed to connect to redis");
     logger.error(error);
-  });
+  }
 }
+
+const kv = connect();
 
 export default kv;
