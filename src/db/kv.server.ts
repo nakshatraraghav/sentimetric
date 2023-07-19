@@ -14,6 +14,7 @@ function connect() {
   } catch (error) {
     logger.error("server failed to connect to redis");
     logger.error(error);
+    process.exit(1);
   }
 }
 
