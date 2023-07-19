@@ -1,0 +1,314 @@
+{
+    "client": "Thunder Client",
+    "collectionName": "sentimetric",
+    "dateExported": "2023-07-19T12:21:14.263Z",
+    "version": "1.1",
+    "folders": [
+        {
+            "_id": "c8b05393-104c-4fe5-85d5-12653b7aea93",
+            "name": "users",
+            "containerId": "",
+            "created": "2023-07-19T11:23:47.670Z",
+            "sortNum": 10000
+        },
+        {
+            "_id": "90b1bda9-828b-4b21-818e-388367208767",
+            "name": "sessions",
+            "containerId": "",
+            "created": "2023-07-19T11:23:47.671Z",
+            "sortNum": 20000
+        },
+        {
+            "_id": "a12ed327-8e5a-4e25-8f85-9569dee58875",
+            "name": "api-keys",
+            "containerId": "",
+            "created": "2023-07-19T11:23:47.672Z",
+            "sortNum": 40000
+        },
+        {
+            "_id": "70a464ad-2492-46aa-b9d0-51ec2f8e5adf",
+            "name": "services",
+            "containerId": "",
+            "created": "2023-07-19T11:23:47.673Z",
+            "sortNum": 50000
+        },
+        {
+            "_id": "559e626a-f0ad-41ff-adf5-dcf65e1f06e5",
+            "name": "api-requests",
+            "containerId": "",
+            "created": "2023-07-19T11:23:47.674Z",
+            "sortNum": 60000
+        }
+    ],
+    "requests": [
+        {
+            "_id": "e835546b-1bfd-45f8-90a9-850e0ff1fb71",
+            "colId": "2140c20e-3cdb-48d7-830e-288617967729",
+            "containerId": "",
+            "name": "healthcheck",
+            "url": "https://sentimetric.onrender.com/health",
+            "method": "GET",
+            "sortNum": 10000,
+            "created": "2023-07-19T11:23:47.670Z",
+            "modified": "2023-07-19T12:16:42.047Z",
+            "headers": [],
+            "params": [],
+            "tests": []
+        },
+        {
+            "_id": "28b7c162-0d77-4c3b-9fbe-f25938f3bcf1",
+            "colId": "2140c20e-3cdb-48d7-830e-288617967729",
+            "containerId": "c8b05393-104c-4fe5-85d5-12653b7aea93",
+            "name": "create user",
+            "url": "https://sentimetric.onrender.com/api/users/",
+            "method": "POST",
+            "sortNum": 20000,
+            "created": "2023-07-19T11:23:47.672Z",
+            "modified": "2023-07-19T12:16:57.939Z",
+            "headers": [],
+            "params": [],
+            "body": {
+                "type": "json",
+                "raw": "{\n  \"name\": \"nakshatra raghav\",\n  \"username\": \"combatrickshaw\",\n  \"email\": \"nakshatra.raghav@gmail.com\",\n  \"password\": \"hellohiasd\"\n}",
+                "form": []
+            },
+            "tests": []
+        },
+        {
+            "_id": "65be433c-0acb-43ff-9801-8c548db4d142",
+            "colId": "2140c20e-3cdb-48d7-830e-288617967729",
+            "containerId": "90b1bda9-828b-4b21-818e-388367208767",
+            "name": "login",
+            "url": "https://sentimetric.onrender.com/api/sessions",
+            "method": "POST",
+            "sortNum": 30000,
+            "created": "2023-07-19T11:23:47.673Z",
+            "modified": "2023-07-19T12:17:17.625Z",
+            "headers": [],
+            "params": [],
+            "body": {
+                "type": "json",
+                "raw": "{\n  \"name\": \"nakshatra raghav\",\n  \"username\": \"combatrickshaw\",\n  \"email\": \"nakshatra.raghav@gmail.com\",\n  \"password\": \"hellohiasd\"\n}",
+                "form": []
+            },
+            "tests": []
+        },
+        {
+            "_id": "24039951-b132-441e-b287-7b8252143269",
+            "colId": "2140c20e-3cdb-48d7-830e-288617967729",
+            "containerId": "90b1bda9-828b-4b21-818e-388367208767",
+            "name": "current session",
+            "url": "https://sentimetric.onrender.com/api/sessions",
+            "method": "GET",
+            "sortNum": 40000,
+            "created": "2023-07-19T11:23:47.674Z",
+            "modified": "2023-07-19T12:17:25.846Z",
+            "headers": [],
+            "params": [],
+            "tests": []
+        },
+        {
+            "_id": "a39134ec-8dee-47d4-be16-cfa5cbcf0f29",
+            "colId": "2140c20e-3cdb-48d7-830e-288617967729",
+            "containerId": "90b1bda9-828b-4b21-818e-388367208767",
+            "name": "logout",
+            "url": "localhost:1337/api/sessions/",
+            "method": "DELETE",
+            "sortNum": 50000,
+            "created": "2023-07-19T11:23:47.675Z",
+            "modified": "2023-07-19T11:23:47.675Z",
+            "headers": [],
+            "params": [],
+            "tests": []
+        },
+        {
+            "_id": "182586f4-5940-4120-97bf-d0979c2882f2",
+            "colId": "2140c20e-3cdb-48d7-830e-288617967729",
+            "containerId": "90b1bda9-828b-4b21-818e-388367208767",
+            "name": "logout from all devices",
+            "url": "localhost:1337/api/sessions/all",
+            "method": "DELETE",
+            "sortNum": 60000,
+            "created": "2023-07-19T11:23:47.676Z",
+            "modified": "2023-07-19T11:23:47.676Z",
+            "headers": [],
+            "params": [],
+            "tests": []
+        },
+        {
+            "_id": "0541d487-179b-4fda-b15c-9cf18efaad70",
+            "colId": "2140c20e-3cdb-48d7-830e-288617967729",
+            "containerId": "c8b05393-104c-4fe5-85d5-12653b7aea93",
+            "name": "delete user",
+            "url": "localhost:1337/api/users/",
+            "method": "DELETE",
+            "sortNum": 70000,
+            "created": "2023-07-19T11:23:47.677Z",
+            "modified": "2023-07-19T11:23:47.677Z",
+            "headers": [],
+            "params": [],
+            "tests": []
+        },
+        {
+            "_id": "54ea03b0-10d0-4ab3-a52e-ea23cc551abd",
+            "colId": "2140c20e-3cdb-48d7-830e-288617967729",
+            "containerId": "90b1bda9-828b-4b21-818e-388367208767",
+            "name": "all active sessions",
+            "url": "https://sentimetric.onrender.com/api/sessions/all",
+            "method": "GET",
+            "sortNum": 130000,
+            "created": "2023-07-19T11:23:47.678Z",
+            "modified": "2023-07-19T12:17:59.879Z",
+            "headers": [],
+            "params": [],
+            "tests": []
+        },
+        {
+            "_id": "f5f7bd1f-3c65-4e55-84aa-35eac61effc6",
+            "colId": "2140c20e-3cdb-48d7-830e-288617967729",
+            "containerId": "",
+            "name": "api version",
+            "url": "https://sentimetric.onrender.com/",
+            "method": "GET",
+            "sortNum": 140000,
+            "created": "2023-07-19T11:23:47.679Z",
+            "modified": "2023-07-19T12:16:32.175Z",
+            "headers": [],
+            "params": [],
+            "tests": []
+        },
+        {
+            "_id": "a1ca3f2b-4b38-4992-990a-8e8c9c9a9a58",
+            "colId": "2140c20e-3cdb-48d7-830e-288617967729",
+            "containerId": "a12ed327-8e5a-4e25-8f85-9569dee58875",
+            "name": "generate",
+            "url": "https://sentimetric.onrender.com/api/apikeys/",
+            "method": "POST",
+            "sortNum": 150000,
+            "created": "2023-07-19T11:23:47.680Z",
+            "modified": "2023-07-19T12:18:07.974Z",
+            "headers": [],
+            "params": [],
+            "tests": []
+        },
+        {
+            "_id": "0ee07979-fee8-458e-b66e-5a6a25f0e23d",
+            "colId": "2140c20e-3cdb-48d7-830e-288617967729",
+            "containerId": "a12ed327-8e5a-4e25-8f85-9569dee58875",
+            "name": "revoke",
+            "url": "localhost:1337/api/apikeys/",
+            "method": "DELETE",
+            "sortNum": 160000,
+            "created": "2023-07-19T11:23:47.681Z",
+            "modified": "2023-07-19T11:23:47.681Z",
+            "headers": [
+                {
+                    "name": "x-api-key",
+                    "value": "om4bDF87FuvYdMQRLGhj1gIDsVKGELhq"
+                }
+            ],
+            "params": [],
+            "tests": []
+        },
+        {
+            "_id": "237391b9-1ce4-4100-adb1-c803f86a46ca",
+            "colId": "2140c20e-3cdb-48d7-830e-288617967729",
+            "containerId": "a12ed327-8e5a-4e25-8f85-9569dee58875",
+            "name": "get active api key",
+            "url": "https://sentimetric.onrender.com/api/apikeys/",
+            "method": "GET",
+            "sortNum": 170000,
+            "created": "2023-07-19T11:23:47.682Z",
+            "modified": "2023-07-19T12:18:29.878Z",
+            "headers": [],
+            "params": [],
+            "tests": []
+        },
+        {
+            "_id": "607ba227-b865-4cfa-9d5d-4e984f72112a",
+            "colId": "2140c20e-3cdb-48d7-830e-288617967729",
+            "containerId": "70a464ad-2492-46aa-b9d0-51ec2f8e5adf",
+            "name": "text similarity",
+            "url": "https://sentimetric.onrender.com/api/services/similarity",
+            "method": "POST",
+            "sortNum": 180000,
+            "created": "2023-07-19T11:23:47.683Z",
+            "modified": "2023-07-19T12:18:56.856Z",
+            "headers": [
+                {
+                    "name": "x-api-key",
+                    "value": "LoE-Xzjdc7PL2oDg-WpbRYJ9gNLG6ltD"
+                }
+            ],
+            "params": [],
+            "body": {
+                "type": "json",
+                "raw": "{\n  \"text1\": \"What has happened to my delivery\",\n  \"text2\": \"What is wrong with my shipping\"\n}",
+                "form": []
+            },
+            "tests": []
+        },
+        {
+            "_id": "f7ca869b-f7a3-47bb-8f29-515efa366a50",
+            "colId": "2140c20e-3cdb-48d7-830e-288617967729",
+            "containerId": "70a464ad-2492-46aa-b9d0-51ec2f8e5adf",
+            "name": "text sentiment",
+            "url": "https://sentimetric.onrender.com/api/services/sentiment",
+            "method": "POST",
+            "sortNum": 190000,
+            "created": "2023-07-19T11:23:47.684Z",
+            "modified": "2023-07-19T12:19:16.614Z",
+            "headers": [
+                {
+                    "name": "x-api-key",
+                    "value": "LoE-Xzjdc7PL2oDg-WpbRYJ9gNLG6ltD"
+                }
+            ],
+            "params": [],
+            "body": {
+                "type": "json",
+                "raw": "{\n  \"text\": \"i like apples\"\n}",
+                "form": []
+            },
+            "tests": []
+        },
+        {
+            "_id": "3892fc65-e29d-4532-91ca-39c6c3c94967",
+            "colId": "2140c20e-3cdb-48d7-830e-288617967729",
+            "containerId": "559e626a-f0ad-41ff-adf5-dcf65e1f06e5",
+            "name": "get all requests made",
+            "url": "localhost:1337/api/requests",
+            "method": "GET",
+            "sortNum": 220000,
+            "created": "2023-07-19T11:23:47.685Z",
+            "modified": "2023-07-19T11:23:47.685Z",
+            "headers": [],
+            "params": [],
+            "tests": []
+        },
+        {
+            "_id": "234bdca4-ef2c-405f-b721-3078c2e5ae89",
+            "colId": "2140c20e-3cdb-48d7-830e-288617967729",
+            "containerId": "70a464ad-2492-46aa-b9d0-51ec2f8e5adf",
+            "name": "phonetic matching",
+            "url": "https://sentimetric.onrender.com/api/services/phonetics",
+            "method": "POST",
+            "sortNum": 230000,
+            "created": "2023-07-19T11:23:47.686Z",
+            "modified": "2023-07-19T12:20:51.344Z",
+            "headers": [
+                {
+                    "name": "x-api-key",
+                    "value": "LoE-Xzjdc7PL2oDg-WpbRYJ9gNLG6ltD"
+                }
+            ],
+            "params": [],
+            "body": {
+                "type": "json",
+                "raw": "{\n  \"worda\": \"banana\",\n  \"wordb\": \"jaasdasdlanasda\"\n}",
+                "form": []
+            },
+            "tests": []
+        }
+    ]
+}
